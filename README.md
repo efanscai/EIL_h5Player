@@ -28,26 +28,28 @@
 | reload |	方法 | H5切换视频方法(H5播放器专用)	|无 |	_ejuInit.reload() |
 
 ###播放器快速上手
+<pre><code className="javascript">
 var _ejuInit = _ejuInit || {};       //创建初始化实例
-                _ejuInit.width = "400";          //选填，播放器宽度，PC播放器默认宽度840px，h5播放器默认宽度为屏幕宽度
-                _ejuInit.height = "300";         //选填，播放器高度，PC播放器默认高度480px，h5播放器默认高度为屏幕宽度的9/16
-            _ejuInit.wrapElemId = "ejuPlayerWrap";   //父容器id
-            _ejuInit.type = 2;                   //必填，调用播放器类型，0为自适应移动端或PC端，1为调用h5播放器，2为调用flash播放器
-            _ejuInit.videoQueue = [              //必填，视频相关设置
-                {
-                    liveId: "21093",             //必填
-                    videoType: 1,                //必填，1为直播，2为点播
-                    videoUrl: "rtmp://pili-live-rtmp.qdtong.net/leju-live-2/5507bd",   //必填，播放地址
-                    imageUrl: "http://ww2.sinaimg.cn/orj480/8191f1c3gw1f6hoegba6xj23402c0hdu.jpg",   //必填，预览图
-                    auto: true                   //选填，自动播放
-                }
-                ];
-                /*插入脚本文件*/
-                (function () {
-                var _ejuScript = document['createElement']('script');
-                _ejuScript.type = 'text/javascript';
-                _ejuScript.async = true;
-                _ejuScript.src = 'http://static-cdn1.ejucloud.com/eju_video/1.12/init.js';     //脚本文件引用地址
-                var _ejuSrc = document.getElementsByTagName('script')[0];
-                _ejuSrc.parentNode.insertBefore(_ejuScript, _ejuSrc)
-            })();
+    _ejuInit.width = "400";          //选填，播放器宽度，flash播放器默认宽度840px，h5播放器默认宽度为屏幕宽度
+    _ejuInit.height = "300";         //选填，播放器高度，flash播放器默认高度480px，h5播放器默认高度为屏幕宽度的9/16
+    _ejuInit.wrapElemId = "ejuPlayerWrap";   //父容器id
+    _ejuInit.type = 2;                   //必填，调用播放器类型，0为自适应移动端或PC端，1为调用h5播放器，2为调用flash播放器
+    _ejuInit.videoQueue = [              //必填，视频相关设置
+          {
+             liveId: "21093",             //必填
+             videoType: 1,                //必填，1为直播，2为点播
+             videoUrl: "rtmp://pili-live-rtmp.qdtong.net/leju-live-2/5507bd",   //必填，播放地址
+             imageUrl: "http://ww2.sinaimg.cn/orj480/8191f1c3gw1f6hoegba6xj23402c0hdu.jpg",   //必填，预览图
+             auto: true                   //选填，自动播放
+           }
+        ];
+    /*插入脚本文件*/
+ function () {
+    var _ejuScript = document['createElement']('script');
+        _ejuScript.type = 'text/javascript';
+        _ejuScript.async = true;
+        _ejuScript.src = 'http://static-cdn1.ejucloud.com/eju_video/1.12/init.js';     //脚本文件引用地址
+    var _ejuSrc = document.getElementsByTagName('script')[0];
+        _ejuSrc.parentNode.insertBefore(_ejuScript, _ejuSrc)
+ })();
+</code></pre>
