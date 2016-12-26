@@ -1,4 +1,4 @@
-## 播放器api
+## 播放器API
 
 ### 播放器初始化参数
 | 参数 |	值类型	| 说明|	默认值|	是否必填|
@@ -27,7 +27,7 @@
 | isCommentsOn |	方法 | ios返回弹幕是否开启	|布尔值 |	_ejuInit.isCommentsOn() |
 | reload |	方法 | H5切换视频方法(H5播放器专用)	|无 |	_ejuInit.reload() |
 
-###播放器快速上手
+### 播放器快速上手
 <pre><code className="javascript">
 var _ejuInit = _ejuInit || {};       //创建初始化实例
     _ejuInit.width = "400";          //选填，播放器宽度，flash播放器默认宽度840px，h5播放器默认宽度为屏幕宽度
