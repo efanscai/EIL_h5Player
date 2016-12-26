@@ -1,4 +1,4 @@
-## 播放器api 
+## 播放器api
 
 ### 播放器初始化参数
 | 参数 |	值类型	| 说明|	默认值|	是否必填|
@@ -48,7 +48,7 @@ var _ejuInit = _ejuInit || {};       //创建初始化实例
     var _ejuScript = document['createElement']('script');
         _ejuScript.type = 'text/javascript';
         _ejuScript.async = true;
-        _ejuScript.src = 'http://static-cdn1.ejucloud.com/eju_video/1.12/init.js';     //脚本文件引用地址
+        _ejuScript.src = 'http://static.ejudata.com/eju_video/2.1.7/init.js';     //脚本文件引用地址
     var _ejuSrc = document.getElementsByTagName('script')[0];
         _ejuSrc.parentNode.insertBefore(_ejuScript, _ejuSrc)
  })();
