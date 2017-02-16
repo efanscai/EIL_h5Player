@@ -6,6 +6,7 @@
 | width |	Number | 播放器宽度，单位是px	|H5播放器是屏幕宽度，flash播放器是840px |	否 |
 | height |	Number |	播放器高度，单位是px|	H5播放器是屏幕宽度的9/16，flash播放器是480px |	否 |
 | wrapElemId |	String|	父容器ID，包裹播放器的DOM标签ID名称	| 无|	是 |
+| com |	String|	项目组名称缩写	| 无|	是 |
 | type | Number| 	调用类型：0为自适应移动端或PC端，1为调用H5播放器，2为调用flash播放器| 	无	| 是|
 | liveId| 	String| 	直播ID| 	无| 	是|
 | videoType| 	Number| 	调用类型：1为直播，2为点播	 |无 |	是 |
@@ -34,7 +35,8 @@ var _ejuInit = _ejuInit || {};       //创建初始化实例
     _ejuInit.height = "300";         //选填，播放器高度，flash播放器默认高度480px，h5播放器默认高度为屏幕宽度的9/16
     _ejuInit.wrapElemId = "ejuPlayerWrap";   //父容器id
     _ejuInit.type = 2;                   //必填，调用播放器类型，0为自适应移动端或PC端，1为调用h5播放器，2为调用flash播放器
-    _ejuInit.videoQueue = [              //必填，视频相关设置
+    _ejuInit.com = 'leju_xf';            //必填，项目组名称缩写
+    _ejuInit.videoQueue = [              //必填，视频相关设置
           {
              liveId: "21093",             //必填
              videoType: 1,                //必填，1为直播，2为点播
