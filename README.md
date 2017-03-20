@@ -52,7 +52,7 @@ var _ejuInit = _ejuInit || {};       //创建初始化实例
     var _ejuScript = document['createElement']('script');
         _ejuScript.type = 'text/javascript';
         _ejuScript.async = true;
-        _ejuScript.src = 'http://static.ejudata.com/eju_video/2.2.0/init.js';     //脚本文件引用地址
+        _ejuScript.src = 'http://static.ejudata.com/eju_video/2.3.1/init.js';     //脚本文件引用地址
     var _ejuSrc = document.getElementsByTagName('script')[0];
         _ejuSrc.parentNode.insertBefore(_ejuScript, _ejuSrc)
  })();
