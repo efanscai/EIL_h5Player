@@ -27,6 +27,8 @@
 | messageAdd |	方法 | ios发送弹幕	|无 |	_ejuInit.messageAdd() |
 | isCommentsOn |	方法 | ios返回弹幕是否开启	|布尔值 |	_ejuInit.isCommentsOn() |
 | reload |	方法 | H5切换视频方法(H5播放器专用)	|无 |	_ejuInit.reload() |
+| fPlay |	方法 | flash播放器视频播放方法(flash播放器专用)	|无 |	_ejuInit.fPlay() |
+| fPause |	方法 | flash播放器视频暂停方法(flash播放器专用)	|无 |	_ejuInit.fPause() |
 
 ### 播放器快速上手
 <pre><code className="javascript">
