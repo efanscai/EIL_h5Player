@@ -32,6 +32,7 @@
                 videoUrl: "http://mvvideo10.meitudata.com/57ed9d408ba2b7621.mp4", //必填，播放地址
                 imageUrl: "http://mvimg2.meitudata.com/57ed0171c1d96316.jpg", //必填，预览图
                 auto: true //选填，自动播放
+                volume: 20 //起始音量
             }
         ];
 
@@ -41,7 +42,7 @@
             _ejuScript.type = 'text/javascript';
             _ejuScript.async = true;
 
-            _ejuScript.src = 'http://static.ejudata.com/eju_video/2.4.1/init.js'; //脚本文件引用地址
+            _ejuScript.src = 'http://static-live.ejudata.com/eju_video/2.5.0/init.js'; //脚本文件引用地址
 
             var _ejuSrc = document.getElementsByTagName('script')[0];
             _ejuSrc.parentNode.insertBefore(_ejuScript, _ejuSrc)
