@@ -1,5 +1,5 @@
 ## 播放器API
-最新版本：2.4.1
+最新版本：2.5.0
 
 ### 播放器初始化参数
 | 参数 |	值类型	| 说明|	默认值|	是否必填|
@@ -16,7 +16,7 @@
 | auto	| Boolean| 	调用类型：true为自动播放，false不自动播放（部分手机不支持自动播放）| 	false| 	是|
 | xmlid| 	String| 	Flash播放器调用远程的调用接口（Flash播放器专用）| 	无| 	否|
 | detailHref| 	String| 	详情链接（h5播放器专用）| 	无| 	否|
-| volume| 	Boolean| 	音量开关，true为开启音量功能，false不开启（ios不支持音量功能）| 	无| 	否|
+| volume| 	number| 	控制起始音量（移动端不支持）| 	50| 	否|
 | fullscreenStart| 	方法| 	点击进入全屏回调函数（H5播放器专用）| 	无| 	否|
 | fullscreenEnd| 	方法| 	点击退出全屏回调函数（H5播放器专用）| 	无| 	否|
 
@@ -46,14 +46,15 @@ var _ejuInit = _ejuInit || {};       //创建初始化实例
              videoUrl: "rtmp://pili-live-rtmp.qdtong.net/leju-live-2/5507bd",   //必填，播放地址
              imageUrl: "http://ww2.sinaimg.cn/orj480/8191f1c3gw1f6hoegba6xj23402c0hdu.jpg",   //必填，预览图
              auto: true                   //选填，自动播放
-           }
+             volume: 20                   //音量
+           }
         ];
     /*插入脚本文件*/
  function () {
     var _ejuScript = document['createElement']('script');
         _ejuScript.type = 'text/javascript';
         _ejuScript.async = true;
-        _ejuScript.src = 'http://static.ejudata.com/eju_video/2.4.1/init.js';     //脚本文件引用地址
+        _ejuScript.src = 'http://static-live.ejudata.com/eju_video/2.5.0/init.js';     //脚本文件引用地址
     var _ejuSrc = document.getElementsByTagName('script')[0];
         _ejuSrc.parentNode.insertBefore(_ejuScript, _ejuSrc)
  })();
